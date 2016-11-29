@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pacient List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="'Pacient List'" />
+<br/>
+<p th:text="'Name|EGN'" />
+<tr th:each="pacient : ${pacs}">
+
+    <table border ="1">
+        <tr>
+            <td th:text="${pacient.name}"> NAME'</td>
+            <td th:text="${pacient.egn}"> EGN'</td>
+
+        </tr>
+
+
+
+    </table>
+</tr>
+</body>
+</html>

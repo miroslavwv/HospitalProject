@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="#" th:action="@{/pacientList}" th:object="${PacientDto}" method="post">
+    <p>nickName: <input type="text" th:field="*{nickName}" /></p>
+    <p>password: <input type="text" th:field="*{password}" /></p>
+    <p>name: <input type="text" th:field="*{name}" /></p>
+    <p>egn: <input type="text" th:field="*{egn}"/></p>
+    <p>illness: <input type="text" th:field="*{illness}"/></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>
