@@ -35,9 +35,11 @@ public class LoginController {
             return "noUserExist";
         }
         else if(checkLogin(nickName,password)==1){
+            //pacient
             return "logged";
         }
         else if(checkLogin(nickName,password)==2){
+            //doctor
             return "logged";
         }
         return "noUserExist";
