@@ -28,15 +28,18 @@ public class LoginController {
     }
 
 
+
+
     @RequestMapping("/tryLogin")
     public String tryLog(@ModelAttribute("nickName") String nickName,@ModelAttribute("password") String password){
 
         if(checkLogin(nickName,password)==0){
             return "noUserExist";
         }
+
         else if(checkLogin(nickName,password)==1){
             //pacient
-            return "logged";
+            return "pacienthome";
         }
         else if(checkLogin(nickName,password)==2){
             //doctor

@@ -6,22 +6,28 @@
 </head>
 <body>
 <header th:replace="layout :: site-header"></header>
+<div>
 <p th:text="'Pacient List'" />
 <br/>
-<p th:text="'Name|EGN'" />
-<tr th:each="pacient : ${pacs}">
-
-    <table border ="1">
+    <div id="tables">
+    <table>
         <tr>
+            <th>Name</th>
+            <th>EGN</th>
+        </tr>
+
+        <tr th:each="pacient : ${pacs}">
+
             <td th:text="${pacient.name}"> NAME'</td>
             <td th:text="${pacient.egn}"> EGN'</td>
 
+
         </tr>
 
-
-
     </table>
-</tr>
+    </div>
+</div>
 <footer th:replace="layout :: site-footer"></footer>
+
 </body>
 </html>
