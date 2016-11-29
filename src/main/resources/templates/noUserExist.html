@@ -2,15 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head  th:replace="layout :: site-head">>
     <meta charset="UTF-8"/>
-    <title>Login</title>
+    <title>nologg</title>
 </head>
+
 <body>
 <header th:replace="layout :: site-header"></header>
-<form th:action="@{/tryLogin}" method="POST">
-    User Name : <input type="text" name="nickName"/> <br/><br/>
-    Password: <input type="password" name="password"/> <br/><br/>
-    <input type="submit" value="Login"/>
-</form>
+<h1>The user doesnt exist!</h1>
+<a href="home.html" th:href="@{/}">Back to home.</a>
 <footer th:replace="layout :: site-footer"></footer>
 </body>
 </html>

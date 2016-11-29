@@ -19,7 +19,7 @@ public class PacientListController {
     PacientServiceImpl pacientService;
 
     @RequestMapping("/pacientList")
-    public String pacList(Model model,@ModelAttribute PacientDto pd){
+    public String pacList(Model model,@ModelAttribute("pacs") PacientDto pd){
         Pacient pc = pacientService.create(pd.getNickName(),pd.getName(),pd.getPassword(),pd.getEgn(),pd.getIllness());
         pacientService.register(pc);
         List<Pacient> pacs = pacientService.getAllPacients();

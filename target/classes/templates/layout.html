@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="site-head">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../public/css/styles.css" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<header th:fragment="site-header">
+    <div id="menu">
+    <a href="home.html" th:href="@{/}">Home</a>
+    <a href="users/login.html" th:href="@{/login}">Login</a>
+    <a href="users/register.html" th:href="@{/register}">Register</a>
+    </div>
+</header>
+<header th:fragment="pacient-header">
+    <div id="menu2">
+        <a href="home.html" th:href="@{/}">Home</a>
+        <a href="users/login.html" th:href="@{/login}">Login</a>
+        </div>
+</header>
+<h1>Welcome, Under Construction....</h1>
+<footer th:fragment="site-footer">Spring Project...</footer>
+</body>
+</html>

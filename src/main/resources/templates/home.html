@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
     <meta charset="UTF-8"/>
     <title>Home</title>
 
 </head>
 <body>
-<h1>Home</h1>
-<div>.
-    <a href="login.html">
-        <input type="button" value="Login" />
-    </a>
+<header th:replace="layout :: site-header"></header>
+<div><h1 id="news-header">Welcome in our website.</h1>
+    <div id="info">
+        A hospital is a health care institution providing patient treatment with specialized medical
+        and nursing staff and medical equipment. The best-known type of hospital is the general hospital,
+        which typically has an emergency department to treat urgent health problems ranging from a broken
+        arm to a heart attack. A district hospital typically is the major health care facility in its region,
+        with large numbers of beds for intensive care and additional beds for patients who need long-term care.
+        Specialised hospitals include trauma centres, rehabilitation hospitals, children's hospitals, seniors'
+        (geriatric) hospitals, and hospitals for dealing with specific medical needs such as psychiatric treatment
+        (see psychiatric hospital) and certain disease categories.
+        Specialised hospitals can help reduce health care costs compared to general hospitals.
+    </div>
 </div>
-<div>.
-    <a href="register.html.html">
-        <input type="button" value="Register" />
-        HELLOOO
-        Zdraveite tova e sait za ludnica.
-    </a>
-</div>
+
+
+<footer th:replace="layout :: site-footer"></footer>
 </body>
 </html>

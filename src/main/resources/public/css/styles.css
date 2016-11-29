@@ -1,0 +1,41 @@
+body>header {
+    background-color: #eee;
+    padding: 5px;
+}
+
+#menu, #menu2{
+    font-size: 30px;
+}
+#news-header, #info{
+    text-align: center;
+    border: groove;
+    border-radius: 2px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+body>footer {
+    background: #eee;
+    padding: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+#forms>input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#forms{
+    text-align: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    display-model: 50%;
+}

@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head  th:replace="layout :: site-head">>
     <title>Pacient List</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+<header th:replace="layout :: site-hedaer"></header>
 <p th:text="'Pacient List'" />
 <br/>
 <p th:text="'Name|EGN'" />
@@ -21,5 +22,6 @@
 
     </table>
 </tr>
+<footer th:replace="layout :: site-footer"></footer>
 </body>
 </html>

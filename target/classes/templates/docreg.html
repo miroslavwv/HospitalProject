@@ -1,17 +1,20 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head  th:replace="layout :: site-head">>
     <title>Register</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<form action="#" th:action="@{/doctorList}" th:object="${DoctorDto}" method="post">
-    <p>nickName: <input type="text" th:field="*{nickName}" /></p>
-    <p>password: <input type="text" th:field="*{password}" /></p>
-    <p>name: <input type="text" th:field="*{name}" /></p>
-    <p>egn: <input type="text" th:field="*{egn}"/></p>
-    <p>specialization: <input type="text" th:field="*{doctorSpecialization}"/></p>
+<header th:replace="layout :: site-header"></header>
+<h2 style="text-align: center">Register</h2>
+<form id="forms" action="#" th:action="@{/doctorList}" th:object="${DoctorDto}" method="post">
+    <p>nickName: <br/> <input type="text" th:field="*{nickName}" /></p>
+    <p>password: <br/> <input type="text" th:field="*{password}" /></p>
+    <p>name: <br/> <input type="text" th:field="*{name}" /></p>
+    <p>egn:  <br/><input type="text" th:field="*{egn}"/></p>
+    <p>specialization: <br/> <input type="text" th:field="*{doctorSpecialization}"/></p>
     <p><input type="submit" value="Submit" /></p>
 </form>
+<footer th:replace="layout :: site-footer"></footer>
 </body>
 </html>
