@@ -39,3 +39,22 @@ body>footer {
     padding: 20px;
     display-model: 50%;
 }
+th, td {
+
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid darkgrey;
+
+}
+table {
+    width: 85%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th {
+    height: 50px;
+    background-color: #4CAF50;
+    color: white;
+
+}

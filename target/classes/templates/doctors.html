@@ -5,23 +5,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<header th:replace="layout :: site-hedaer"></header>
-<p th:text="'Pacient List'" />
+<header th:replace="layout :: site-header"></header>
+<p th:text="'Doctor List'" />
 <br/>
-<p th:text="'Name|EGN'" />
-<tr th:each="doctor : ${docs}">
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Specialization</th>
+    </tr>
+    <tr th:each="doctor : ${docs}">
+        <td th:text="${doctor.name}"></td>
+        <td th:text="${doctor.doctorSpecialization}"></td>
+    </tr>
+</table>
 
-    <table border ="1">
-        <tr>
-            <td th:text="${doctor.name}"> NAME'</td>
-            <td th:text="${doctor.egn}"> EGN'</td>
-
-        </tr>
 
 
-
-    </table>
-</tr>
 <footer th:replace="layout :: site-footer"></footer>
 </body>
 </html>
