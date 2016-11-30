@@ -43,7 +43,7 @@ public class LoginController {
         }
         else if(checkLogin(nickName,password)==2){
             //doctor
-            return "logged";
+            return "doctorhome";
         }
         return "noUserExist";
     }

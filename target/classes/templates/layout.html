@@ -20,6 +20,13 @@
         <a th:href="@{/pacientRegDoc}">Add doctor</a>
         </div>
 </header>
+<header th:fragment="doctor-header">
+    <div id="menu3">
+        <a  th:href="@{/doctorHome}">Home</a>
+        <a th:href="@{/pacientList}">Pacients</a>
+        <a th:href="@{/doctorRegPac}">Add pacient</a>
+    </div>
+</header>
 <h1>Welcome, Under Construction....</h1>
 <footer th:fragment="site-footer">Spring Project...</footer>
 </body>

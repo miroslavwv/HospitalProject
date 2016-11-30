@@ -1,5 +1,6 @@
 package hospitalweb.controllers;
 
+import hospitalweb.Services.PacientService;
 import hospitalweb.Services.PacientServiceImpl;
 import hospitalweb.domain.factory.dto.PacientDto;
 import hospitalweb.model.Doctor;
@@ -16,16 +17,14 @@ import java.util.List;
 @Controller
 public class PacientListController {
     @Autowired
-    PacientServiceImpl pacientService;
+    PacientService pacientService;
 
-    @RequestMapping("/pacientList")
+    @RequestMapping("/pacientReg")
     public String pacList(Model model,@ModelAttribute("pacs") PacientDto pd){
         Pacient pc = pacientService.create(pd.getNickName(),pd.getName(),pd.getPassword(),pd.getEgn(),pd.getIllness());
         pacientService.register(pc);
-        List<Pacient> pacs = pacientService.getAllPacients();
 
-        model.addAttribute("pacs",pacs);
-        return "pacients";
+        return "pacienthome";
     }
 
 }

@@ -7,7 +7,7 @@
 <body>
 <header th:replace="layout :: site-header"></header>
 <h2 style="text-align: center">Register</h2>
-<form id="forms" action="#" th:action="@{/doctorList}" th:object="${DoctorDto}" method="post">
+<form id="forms" action="#" th:action="@{/doctorReg}" th:object="${DoctorDto}" method="post">
     <p>nickName: <br/> <input type="text" th:field="*{nickName}" /></p>
     <p>password: <br/> <input type="text" th:field="*{password}" /></p>
     <p>name: <br/> <input type="text" th:field="*{name}" /></p>

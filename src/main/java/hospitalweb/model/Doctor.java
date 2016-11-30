@@ -1,9 +1,7 @@
 package hospitalweb.model;
 
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name="doctors")
@@ -12,6 +10,20 @@ public class Doctor extends User{
 
     @Column(name="doctor_specialization")
     private String doctorSpecialization;
+
+    @ManyToMany
+    @JoinTable(name = "doctor_pacients",
+            joinColumns = @JoinColumn(name = "doctor_id", referencedColumnName = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "pacient_id", referencedColumnName = "user_id"))
+    private Set<Pacient> pacientSet;
+
+    public Set<Pacient> getPacientSet() {
+        return pacientSet;
+    }
+
+    public void setPacientSet(Set<Pacient> pacientSet) {
+        this.pacientSet = pacientSet;
+    }
 
     public Doctor(){
 

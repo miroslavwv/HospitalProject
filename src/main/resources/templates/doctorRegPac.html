@@ -5,11 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<header th:replace="layout :: pacient-header"></header>
-<h2 style="text-align: center">Add Doctor</h2>
-<form th:action="@{/tryAddDoctor}" method="POST">
-    Name of Doctor : <input type="text" name="name"/> <br/><br/>
-    Specialization of Doctor: <input type="text" name="specialization"/> <br/><br/>
+<header th:replace="layout :: doctor-header"></header>
+<h2 style="text-align: center">Add Pacient in your book</h2>
+<form th:action="@{/tryAddPacient}" method="POST">
+    Name of Pacient : <input type="text" name="name"/> <br/><br/>
+    Illness of Pacient: <input type="text" name="illness"/> <br/><br/>
     <input type="submit" value="Add"/>
 </form>
 <footer th:replace="layout :: site-footer"></footer>
